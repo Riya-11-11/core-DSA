@@ -15,16 +15,38 @@ let n = s.length;
 
 for (let i = 0; i < k; i++) {
   let ch = s[i];
+
   if (ch === "a" || ch === "e" || ch === "i" || ch === "o" || ch === "u") {
     count++;
   }
 }
- console.log(count);
- let max = count;
 
- for (let r = 1; r <= n-k; r++) {
-    
-    
- }
+let max = count;
 
- 
+for (let r = 1; r <= n - k; r++) {
+  if (
+    s[r - 1] === "a" ||
+    s[r - 1] === "e" ||
+    s[r - 1] === "i" ||
+    s[r - 1] === "o" ||
+    s[r - 1] === "u"
+  ) {
+    count--;
+  }
+
+  if (
+    s[r + k - 1] === "a" ||
+    s[r + k - 1] === "e" ||
+    s[r + k - 1] === "i" ||
+    s[r + k - 1] === "o" ||
+    s[r + k - 1] === "u"
+  ) {
+    count++;
+  }
+
+  if (count > max) {
+    max = count;
+  }
+}
+
+console.log(max);
