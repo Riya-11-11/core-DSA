@@ -18,17 +18,13 @@ let l = 0;
 let r = 1;
 
 while (r < nums.length) {
-  let isUnique = true;
   if (nums[l] === nums[r]) {
-    isUnique = false;
     r++;
-  }
-
-  if (isUnique) {
+  } else {
     nums[l + 1] = nums[r];
     l++;
     r++;
   }
 }
 
-console.log(l+1);
+console.log(l + 1);
