@@ -10,6 +10,7 @@
 
 let nums = [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0];
 let k = 2;
+
 let zeroCount = 0;
 let maxLen = 0;
 let l = 0;
