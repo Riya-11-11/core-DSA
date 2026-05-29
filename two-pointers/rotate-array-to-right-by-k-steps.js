@@ -26,7 +26,7 @@ while (l < r) {
   r--;
 }
 
-while (j > 0) {
+while (i<j) {
   let temp = nums[i];
   nums[i] = nums[j];
   nums[j] = temp;
