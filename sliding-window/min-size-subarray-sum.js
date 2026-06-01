@@ -19,6 +19,7 @@
 
 let arr = [2, 3, 1, 2, 4, 3];
 let target = 7;
+
 let sum = 0;
 let smallestLen = Infinity;
 let l = 0;
