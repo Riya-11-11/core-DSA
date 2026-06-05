@@ -11,7 +11,8 @@
 let str = "()[]{}";
 let stack = [];
 
-for (let ch of str) {
+for (let i = 0; i<str.length; i++) {
+  let ch = str[i];
   let top = stack[stack.length - 1];
 
   if (ch === "(" || ch === "{" || ch === "[") {
