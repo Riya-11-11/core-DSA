@@ -8,7 +8,7 @@ let left = [];
 let ans = 0;
 
 //right nearest smallest ---> NGE
-for (let i = heights.length - 1; i > 0; i--) {
+for (let i = heights.length - 1; i >= 0; i--) {
   let curr = heights[i];
 
   while (stack.length > 0 && heights[stack[stack.length - 1]] >= heights[i]) {
@@ -24,6 +24,10 @@ for (let i = heights.length - 1; i > 0; i--) {
   stack.push(i);
 }
 
+while (stack.length > 0) {
+  stack.pop();
+}
+
 //left nearest smallest ---> PSE
 for (let i = 0; i < heights.length; i++) {
   let curr = heights[i];
@@ -33,7 +37,7 @@ for (let i = 0; i < heights.length; i++) {
   }
 
   if (stack.length === 0) {
-    left[i] = heights.length; // because we will take -1 then our calculation will be complicated...as width = r-l-1
+    left[i] = -1; // because we will take -1 then our calculation will be complicated...as width = r-l-1
   } else {
     left[i] = stack[stack.length - 1];
   }
