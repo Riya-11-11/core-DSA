@@ -16,9 +16,8 @@
 // No loops.
 
 function printNumbs(n) {
-  if (n === 1) {
+  if (n === 0) {
     //base case
-    console.log(1);
     return;
   }
   console.log(n);
