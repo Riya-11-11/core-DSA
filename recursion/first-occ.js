@@ -10,7 +10,7 @@
 let str = "banana";
 let ch = "a";
 
-let idx = 0;
+// let idx = 0;
 
 function firstOcc(str, idx) {
   if (idx === str.length) {
@@ -20,9 +20,9 @@ function firstOcc(str, idx) {
 
   if (str[idx] === ch) {
     return idx;
-  } else {
-    return firstOcc(str, idx + 1);
   }
+
+  return firstOcc(str, idx + 1);
 }
 
-console.log(firstOcc(str, idx));
+console.log(firstOcc(str, 0));
