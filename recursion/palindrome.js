@@ -12,13 +12,12 @@
 // Output:
 // false
 
-let str = "hello";
-let n = str.length;
+let str = "madam";
 
 let l = 0;
-let r = n - 1;
+let r = str.length - 1;
 
-function palindrome(str, n, l, r) {
+function palindrome(str, l, r) {
   if (l >= r) {
     return true;
   }
@@ -27,7 +26,7 @@ function palindrome(str, n, l, r) {
     return false;
   }
 
-  return palindrome(str, n - 1, l + 1, r - 1);
+  return palindrome(str, l + 1, r - 1);
 }
 
-console.log(palindrome(str, n, l, r));
+console.log(palindrome(str, l, r));
