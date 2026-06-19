@@ -13,7 +13,8 @@
 // 1
 
 function countDigits(n) {
-  if (n === 1) {
+  if (n < 10) {
+    //0 to 9
     return 1;
   }
   return 1 + countDigits(Math.floor(n / 10));
