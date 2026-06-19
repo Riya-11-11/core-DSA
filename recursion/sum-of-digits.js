@@ -19,7 +19,7 @@ function sumDigits(n) {
     return n;
   }
 
-  return sumDigits(n % 10) + sumDigits(Math.floor(n / 10));
+  return (n % 10) + sumDigits(Math.floor(n / 10));
 }
 
 console.log(sumDigits(123));
