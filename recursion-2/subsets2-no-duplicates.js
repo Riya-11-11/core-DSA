@@ -1,4 +1,4 @@
-let arr = [1, 1, 1];
+let arr = [1, 2, 2];
 let ans = [];
 let allSubset = [];
 
