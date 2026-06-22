@@ -16,28 +16,14 @@
 let arr = [1, 2, 1];
 let k = 2;
 
-let ans = [];
-let count = 0;
-
-function countSubseq(arr, ans, sum, i) {
+function countSubseq(arr, sum, i) {
   if (i === arr.length) {
     if (sum === k) {
-      //   console.log(ans);
-      count = count + 1;
-    }
-    return;
+      return 1;
+    } else return 0;
   }
 
-  //include
-  ans.push(arr[i]);
-  countSubseq(arr, ans, sum + arr[i], i + 1);
-
-  //backtracking
-  ans.pop();
-
-  //exclude
-  countSubseq(arr, ans, sum, i + 1);
+  return countSubseq(arr, sum + arr[i], i + 1) + countSubseq(arr, sum, i + 1);
 }
 
-countSubseq(arr, ans, 0, 0);
-console.log(count);
+console.log(countSubseq(arr, 0, 0));
