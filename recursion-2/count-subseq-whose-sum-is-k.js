@@ -22,7 +22,7 @@ function countSubseq(arr, sum, i) {
       return 1;
     } else return 0;
   }
-
+  //count = include +exclue
   return countSubseq(arr, sum + arr[i], i + 1) + countSubseq(arr, sum, i + 1);
 }
 
