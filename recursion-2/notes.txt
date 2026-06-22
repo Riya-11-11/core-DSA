@@ -1,0 +1,13 @@
+Just remember these three patterns:
+
+Print all
+console.log(ans);
+return;
+
+Count all
+return include + exclude;
+
+Find one
+if(include) return true;
+if(exclude) return true;
+return false;
