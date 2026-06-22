@@ -11,3 +11,24 @@ Find one
 if(include) return true;
 if(exclude) return true;
 return false;
+
+
+
+This is a major backtracking idea
+
+You have now seen:
+
+Normal recursion
+Explore everything.
+Pruned recursion
+Stop exploring impossible branches.
+
+That idea appears in:
+
+Combination Sum
+N-Queens
+Sudoku
+Rat in a Maze
+Word Search
+
+almost everywhere.
