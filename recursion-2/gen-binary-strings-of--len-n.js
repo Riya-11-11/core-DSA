@@ -14,7 +14,7 @@
 let n = 3;
 let ans = [];
 
-function genBin(ans, i) {
+function genBin(ans) {
   if (ans.length === n) {
     console.log(ans);
     return;
@@ -22,17 +22,17 @@ function genBin(ans, i) {
 
   //include choose 0
   ans.push(0);
-  genBin(ans, i + 1);
+  genBin(ans);
 
   //backtrack
   ans.pop();
 
   //include choose 1
   ans.push(1);
-  genBin(ans, i + 1);
+  genBin(ans);
 
   //backtrack
   ans.pop();
 }
 
-genBin(ans, 0);
+genBin(ans);
