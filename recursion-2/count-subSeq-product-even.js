@@ -16,7 +16,7 @@
 
 let arr = [1, 2, 3];
 
-function countSubseq(arr, product, count, i) {
+function countSubseq(arr, product, i) {
   if (i === arr.length) {
     if (product % 2 === 0) {
       return 1;
@@ -24,9 +24,8 @@ function countSubseq(arr, product, count, i) {
   }
 
   return (
-    countSubseq(arr, product * arr[i], count + 1, i + 1) +
-    countSubseq(arr, product, count + 1, i + 1)
+    countSubseq(arr, product * arr[i], i + 1) + countSubseq(arr, product, i + 1)
   );
 }
 
-console.log(countSubseq(arr, 1, 0, 0));
+console.log(countSubseq(arr, 1, 0));
