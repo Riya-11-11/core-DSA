@@ -22,7 +22,7 @@ let ans = [];
 
 function genBin(ans, count) {
   if (ans.length === n) {
-    if (count === k) {
+    if (count > k) {
       console.log(ans);
     }
     return;
