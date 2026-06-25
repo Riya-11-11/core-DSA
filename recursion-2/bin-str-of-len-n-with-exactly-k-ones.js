@@ -20,9 +20,9 @@ let n = 3;
 let k = 2;
 let ans = [];
 
-function genBin(ans, count) {
+function genBin(ans, oneCount) {
   if (ans.length === n) {
-    if (count > k) {
+    if (oneCount > k) {
       console.log(ans);
     }
     return;
@@ -30,14 +30,14 @@ function genBin(ans, count) {
 
   //include choose 0;
   ans.push(0);
-  genBin(ans, count);
+  genBin(ans, oneCount);
 
   //backtrack
   ans.pop();
 
   //include choose 1
   ans.push(1);
-  genBin(ans, count + 1);
+  genBin(ans, oneCount + 1);
 
   //backtrack
   ans.pop();
