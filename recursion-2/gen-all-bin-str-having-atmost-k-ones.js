@@ -36,9 +36,10 @@ let ans = [];
 
 function binStr(ans, oneCount) {
   if (ans.length === n) {
-    if (oneCount <= k) {
-      console.log(ans);
+    if (oneCount > k) {
+      return;
     }
+    console.log(ans);
     return;
   }
 
