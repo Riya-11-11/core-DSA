@@ -29,8 +29,8 @@ let visited = [false, false, false];
 
 function permutationWithDiffOne() {
   if (path.length === arr.length) {
-    for (let j = 0; j < path.length-1; j++) {
-      let diff = path[j] - path[j+1];
+    for (let j = 0; j < path.length - 1; j++) {
+      let diff = path[j] - path[j + 1];
       if (Math.abs(diff) !== 1) {
         return;
       }
